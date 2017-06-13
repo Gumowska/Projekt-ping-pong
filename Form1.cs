@@ -32,6 +32,10 @@ namespace Projekt_ping_pong
 
             racket.Top = playground.Bottom - (playground.Bottom / 10);                                    //Set the position of racket
 
+            gameover_lbl.Left = (playground.Width / 2) - (gameover_lbl.Width / 2);                      //Position to center
+            gameover_lbl.Top = (playground.Height / 2) - (gameover_lbl.Height / 2);
+
+
 
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -48,7 +52,7 @@ namespace Projekt_ping_pong
                 speed_left += 2;
                 speed_top = -speed_top;                                                              //Change direction
                 points += 1;
-                 points_lbl.Text = points.ToString();
+                points_lbl.Text = points.ToString();
 
 
 
@@ -82,5 +86,6 @@ namespace Projekt_ping_pong
         {
 
         }
+
     }
 }
