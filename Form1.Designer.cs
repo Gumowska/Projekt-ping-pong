@@ -45,39 +45,41 @@
             this.playground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playground.Location = new System.Drawing.Point(0, 0);
             this.playground.Name = "playground";
-            this.playground.Size = new System.Drawing.Size(517, 405);
+            this.playground.Size = new System.Drawing.Size(640, 458);
             this.playground.TabIndex = 0;
             // 
             // ball
             // 
-            this.ball.BackColor = System.Drawing.Color.Red;
-            this.ball.Location = new System.Drawing.Point(159, 175);
+            this.ball.BackColor = System.Drawing.Color.DarkRed;
+            this.ball.Location = new System.Drawing.Point(267, 221);
             this.ball.Name = "ball";
-            this.ball.Size = new System.Drawing.Size(15, 15);
-            this.ball.TabIndex = 1;
+            this.ball.Size = new System.Drawing.Size(25, 25);
+            this.ball.TabIndex = 2;
             this.ball.TabStop = false;
             // 
             // racket
             // 
-            this.racket.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.racket.Location = new System.Drawing.Point(217, 361);
+            this.racket.BackColor = System.Drawing.Color.GreenYellow;
+            this.racket.Location = new System.Drawing.Point(234, 410);
             this.racket.Name = "racket";
-            this.racket.Size = new System.Drawing.Size(75, 15);
-            this.racket.TabIndex = 2;
+            this.racket.Size = new System.Drawing.Size(150, 15);
+            this.racket.TabIndex = 1;
             this.racket.TabStop = false;
             // 
             // timer1
             // 
             this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 405);
+            this.ClientSize = new System.Drawing.Size(640, 458);
             this.Controls.Add(this.playground);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.playground.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).EndInit();
