@@ -34,7 +34,7 @@ namespace Projekt_ping_pong
 
             gameover_lbl.Left = (playground.Width / 2) - (gameover_lbl.Width / 2);                      //Position to center
             gameover_lbl.Top = (playground.Height / 2) - (gameover_lbl.Height / 2);
-
+            gameover_lbl.Visible = false;
 
 
         }
@@ -73,6 +73,7 @@ namespace Projekt_ping_pong
             if (ball.Bottom >= playground.Bottom)
             {
                 timer1.Enabled = false;                                                       //ball is Out-> Stop the game
+                gameover_lbl.Visible = true;
             }
 
         }
