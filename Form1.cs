@@ -16,7 +16,7 @@ namespace Projekt_ping_pong
 
         public int speed_left = 4;                                                                     //Speed of the ball
         public int speed_top = 4;
-        public int point = 0;                                                                          //Scored points
+        public int points = 0;                                                                          //Scored points
 
 
 
@@ -47,7 +47,9 @@ namespace Projekt_ping_pong
                 speed_top += 2;
                 speed_left += 2;
                 speed_top = -speed_top;                                                              //Change direction
-                point += 1;
+                points += 1;
+                 points_lbl.Text = points.ToString();
+
 
 
             }

@@ -33,6 +33,8 @@
             this.ball = new System.Windows.Forms.PictureBox();
             this.racket = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.score_lbl = new System.Windows.Forms.Label();
+            this.points_lbl = new System.Windows.Forms.Label();
             this.playground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).BeginInit();
@@ -40,6 +42,8 @@
             // 
             // playground
             // 
+            this.playground.Controls.Add(this.points_lbl);
+            this.playground.Controls.Add(this.score_lbl);
             this.playground.Controls.Add(this.ball);
             this.playground.Controls.Add(this.racket);
             this.playground.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -71,6 +75,26 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // score_lbl
+            // 
+            this.score_lbl.AutoSize = true;
+            this.score_lbl.Font = new System.Drawing.Font("Algerian", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score_lbl.Location = new System.Drawing.Point(42, 49);
+            this.score_lbl.Name = "score_lbl";
+            this.score_lbl.Size = new System.Drawing.Size(181, 54);
+            this.score_lbl.TabIndex = 3;
+            this.score_lbl.Text = "Wynik:";
+            // 
+            // points_lbl
+            // 
+            this.points_lbl.AutoSize = true;
+            this.points_lbl.Font = new System.Drawing.Font("Algerian", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.points_lbl.Location = new System.Drawing.Point(225, 49);
+            this.points_lbl.Name = "points_lbl";
+            this.points_lbl.Size = new System.Drawing.Size(51, 54);
+            this.points_lbl.TabIndex = 4;
+            this.points_lbl.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,6 +105,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.playground.ResumeLayout(false);
+            this.playground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).EndInit();
             this.ResumeLayout(false);
@@ -93,6 +118,8 @@
         private System.Windows.Forms.PictureBox ball;
         private System.Windows.Forms.PictureBox racket;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label points_lbl;
+        private System.Windows.Forms.Label score_lbl;
     }
 }
 
