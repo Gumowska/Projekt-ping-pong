@@ -15,6 +15,18 @@ namespace Projekt_ping_pong
         public Form1()
         {
             InitializeComponent();
+
+            timer1.Enabled = true;
+            Cursor.Hide();                                                                            //hide the cursor
+
+            this.FormBorderStyle = FormBorderStyle.None;                                              // remove any border
+            this.TopMost = true;                                                                      //bring the form to the front
+            this.Bounds = Screen.PrimaryScreen.Bounds;                                                //make it fullscreen
+
+            racket.Top = playground.Bottom - (playground.Bottom / 10);                                    //Set the position of racket
         }
+
+
+
     }
 }
