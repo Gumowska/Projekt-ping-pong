@@ -57,8 +57,7 @@ namespace Projekt_ping_pong
                 points += 1;
                 points_lbl.Text = points.ToString();
 
-                Random r = new Random();
-                playground.BackColor = Color.FromArgb(r.Next(150, 255), r.Next(150, 255), r.Next(150, 255));     //Get a random RGB Color set is as playground backcolor 
+               
 
             }
             if (ball.Left <= playground.Left)
@@ -96,9 +95,7 @@ namespace Projekt_ping_pong
                 timer1.Enabled = true;
                 gameover_lbl.Visible = false;
 
-                playground.BackColor = Color.White;
-
-
+           
             }
 
 
